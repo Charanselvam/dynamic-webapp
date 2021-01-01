@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import renderfield from "./Validation";
-const SERVER_URL ="https://my-json-server.typicode.com/Charanselvam/json/db/form/form";
+const SERVER_URL ="https://my-json-server.typicode.com/Charanselvam/json/form";
+//const SERVER_URL = "http://localhost:3001/form";
 
 
+// function for fetching json data
 function usePosts() {
   const [form, setForm] = useState([]);
 
@@ -11,13 +13,13 @@ function usePosts() {
       .then((res) => res.json())
       .then((data) => {
         setForm(data);
-        console.log(data);
       });
   }, []);
-  console.log(form);
-
+  //console.log(form);
   return form;
 }
+
+// render function
 
 export default function App() {
   const form = usePosts(); // new
@@ -34,9 +36,7 @@ export default function App() {
             <div className="input-group">
               <label htmlFor={field.Name}>{field.Name}</label>
               <fieldset>
-                {/* {console.log(field.DropdownValue)} */}
                 {renderfield(field)}
-                {/* <label htmlFor={field.input.name}>{field.label.text}</label> */}
               </fieldset>
             </div>
           ))}

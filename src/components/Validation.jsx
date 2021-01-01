@@ -2,9 +2,9 @@ import React from "react";
 var renderfield = (field) => {
   switch (field.Type) {
     case "TextBox":
-      return <input type="text" size={field.Size} maxLength={field.Size} />;
+      return <input type="text" size={field.Size} maxLength={field.Size} id={field.id}/>;
     case "SecretTextBox":
-      return <input type="password" size={field.Size} maxLength={field.Size} />;
+      return <input type="password" size={field.Size} maxLength={field.Size} id= {field.id} />;
     case "CheckBox":
       return (
         <div>
@@ -27,7 +27,7 @@ var renderfield = (field) => {
       );
     case "Dropdown":
       return (
-        <select>
+        <select id= {field.id}>
           {field.DropdownValue.map((value) => (
             <option value={value.Value}>{value.DisplayValue}</option>
           ))}
