@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import renderfield from "./Validation";
-//const SERVER_URL ="https://my-json-server.typicode.com/Charanselvam/json/form";
-const SERVER_URL = "http://localhost:3001/form";
+const SERVER_URL ="https://my-json-server.typicode.com/Charanselvam/json/form";
+//const SERVER_URL = "http://localhost:3001/form";
 
 
 // function for fetching json data

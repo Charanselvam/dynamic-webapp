@@ -9,6 +9,17 @@
        "Type": "TextBox"
      },
      {
+      "Name": "Username",
+      "Size": "10",
+      "Type": "TextBox"
+    },{
+      "Name": "Username",
+      "Size": "10",
+      "Type": "TextBox"
+    },
+     
+   
+     {
        "Name": "Gender",
        "Options":[
            {
